@@ -1,0 +1,119 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Permanent Marker', cursive;
+   color: rgb(185, 189, 223);
+}
+
+h1 {
+   letter-spacing: 6px;
+}
+
+p {
+   font-size: 24px;
+   letter-spacing: 2px;
+}
+
+img {
+   display: block;
+   cursor: pointer;
+}
+
+body {
+   background-color: rgb(74, 8, 105);
+   height: 100vh;
+}
+
+header {
+   position: relative;
+   background-color: rgb(74, 8, 105);
+   padding: 0 40px;
+   text-align: center;
+   height: 160px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 5px 5px 5px rgb(156, 159, 187);
+   z-index: 1;
+}
+
+.easy,
+.normal {
+   cursor: pointer;
+}
+
+.normal {
+   background-color: rgb(185, 189, 223);
+   color: rgb(63, 58, 66);
+}
+
+.title {
+   margin-left: 140px;
+}
+
+.game-selection {
+   display: flex;
+}
+
+.game-avatar {
+   height: 80px;
+   width: 80px;
+   margin: 20px 0px 20px 20px;
+   border-radius: 50%;
+   box-shadow: 3px 3px 3px 1px rgba(13, 13, 19, 0.5);
+}
+
+.cards-container {
+   background-color: rgb(185, 189, 223);
+   padding: 40px 40px;
+   margin: auto;
+   display: grid;
+   perspective: 1800px;
+   grid-template-columns: repeat(10, auto);
+   justify-content: space-between;
+}
+
+.card {
+   position: relative;
+}
+
+.card-face {
+   position: absolute;
+   backface-visibility: hidden;
+   transition: transform 300ms ease-in-out;
+}
+
+.card,
+.card img {
+   height: 190px;
+   width: 150px;
+   margin-bottom: 30px;
+   border-radius: 10px;
+   box-shadow: 5px 5px 5px 5px rgb(156, 159, 187);
+}
+
+.card-front {
+   transform: rotateY(180deg);
+}
+
+.card.visible .card-back {
+   transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+   transform: rotateY(0);
+}
+
+.moana,
+.princess {
+   display: none;
+}
+
+footer {
+   box-shadow: -5px -5px 5px rgb(156, 159, 187);
+}
+
+footer p {
+   text-align: center;
+   padding-top: 5px;
+}
