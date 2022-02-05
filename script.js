@@ -15,18 +15,35 @@ frozenTheme.addEventListener('click', () => {
 
 const createCard = () => {
    let div = document.createElement('div');
-   let cardClass = document.createElement('div');
+   let cardFront = document.createElement('div');
+   let cardBack = document.createElement('div');
+   let frontImg = document.createElement('img');
+   let backImg = document.createElement('img');
 
-   div.classList.add('card')
+   //Creating and adding the container to the main tags
+   div.classList = 'card'
    document.getElementById('cards-container').appendChild(div);
    
-   cardClass.classList.add('card-front')
-   cardClass.classList.add('card-face')
-   document.querySelector('.card').appendChild(cardClass);
+   //Creating the front and back of the card
+   cardFront.classList = 'card-front'
+   cardFront.classList.add('card-face')
+   document.querySelector('.card').appendChild(cardFront);
+
+   cardBack.classList = 'card-back'
+   cardBack.classList.add('card-face')
+   document.querySelector('.card').appendChild(cardBack);
+
+   //Adding the img tag and class
+   frontImg.classList = 'frozen'
+   document.querySelector('.card-front').appendChild(frontImg).src = "assets/Frozen/Completed Photos/frozen1.jpg";
+   backImg.classList = 'frozen'
+   document.querySelector('.card-back').appendChild(backImg).src = "assets/Misc/backCardFrozen.jpg";
    
 }
 
-createCard();
+const generateCard = () => {
+   
+}
 
 selectedCard.forEach((myCard) => {
 	myCard.addEventListener('click', () => {
