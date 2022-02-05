@@ -55,7 +55,9 @@ header {
    display: flex;
 }
 
-.game-avatar {
+.frozen-avatar,
+.moana-avatar,
+.princess-avatar {
    height: 80px;
    width: 80px;
    margin: 20px 0px 20px 20px;
@@ -63,7 +65,7 @@ header {
    box-shadow: 3px 3px 3px 1px rgba(13, 13, 19, 0.5);
 }
 
-.cards-container {
+#cards-container {
    background-color: rgb(185, 189, 223);
    padding: 40px 40px;
    margin: auto;
