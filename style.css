@@ -24,6 +24,10 @@ body {
    height: 100vh;
 }
 
+main {
+   background-color: rgb(185, 189, 223);
+}
+
 header {
    position: relative;
    background-color: rgb(74, 8, 105);
@@ -65,13 +69,33 @@ header {
    box-shadow: 3px 3px 3px 1px rgba(13, 13, 19, 0.5);
 }
 
+.princess-avatar {
+   position: relative;
+}
+
+.moana-avatar,
+.frozen-avatar {
+   position: absolute;
+   transform: translateX(0);
+   transition: 0.2s;
+}
+
+.game-selection:hover .frozen-avatar {
+   /* right: 238px; */
+   transform: translateX(-197px);
+}
+.game-selection:hover .moana-avatar {
+   /* right: 138px; */
+   transform: translateX(-97px);
+}
+
 #cards-container {
-   background-color: rgb(185, 189, 223);
    padding: 40px 40px;
    margin: auto;
+   width: 1500px;
    display: grid;
    perspective: 1800px;
-   grid-template-columns: repeat(10, auto);
+   grid-template-columns: repeat(8, auto);
    justify-content: space-between;
 }
 
