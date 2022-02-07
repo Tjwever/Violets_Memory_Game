@@ -46,13 +46,14 @@ header {
    cursor: pointer;
 }
 
-.normal {
+.toggle {
    background-color: rgb(185, 189, 223);
    color: rgb(63, 58, 66);
+   transition: 0.2s;
 }
 
 .title {
-   margin-left: 140px;
+   margin-right: 68px;
 }
 
 .game-selection {

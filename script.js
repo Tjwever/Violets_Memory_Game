@@ -2,21 +2,43 @@
 const frozenTheme = document.querySelector(".frozen-avatar");
 const moanaTheme = document.querySelector(".moana-avatar");
 const princessTheme = document.querySelector(".princess-avatar");
+const easy = document.querySelector(".easy")
+const normal = document.querySelector(".normal")
+
+//Theme variables
+const titleChange = document.querySelector(".title-change");
+const header = document.querySelector("header")
 
 //Card capture variables
 const frozenCard = document.querySelector(".frozen");
 const moanaCard = document.querySelector(".moana");
 const princessCard = document.querySelector(".princess");
 
+//Difficulty setting
+easy.addEventListener('click', () => {
+  normal.classList.remove('toggle');
+  easy.classList.add('toggle');
+})
+normal.addEventListener('click', () => {
+  easy.classList.remove('toggle');
+  normal.classList.add('toggle');
+})
+
 //Theme Switch
 frozenTheme.addEventListener("click", () => {
-  console.log("frozen");
+  titleChange.innerHTML = 'Frozen'
+  header.style.backgroundColor = 'rgb(74, 8, 105)'
+  generateCard();
 });
 moanaTheme.addEventListener("click", () => {
-  console.log("moana");
+  titleChange.innerHTML = 'Moana'
+  header.style.backgroundColor = 'rgb(8, 105, 60)'
+  generateCard();
 });
 princessTheme.addEventListener("click", () => {
-  console.log("princess");
+  titleChange.innerHTML = 'Princess'
+  header.style.backgroundColor = 'rgb(190, 86, 156)'
+  generateCard();
 });
 
 //Generating the cards
@@ -63,7 +85,6 @@ const generateCard = () => {
   });
 
   selected();
-
   console.log(deck);
 };
 
